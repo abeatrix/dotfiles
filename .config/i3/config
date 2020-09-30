@@ -1,0 +1,22 @@
+# Set mod to Window key
+set $mod Mod4
+
+# Change gap size
+gaps outer 5
+gaps inner 20
+
+# Floating windows
+for_windows [class="mpv"] floating enable
+
+# Startup Programs
+## fonts
+exec_always xset +fp /home/bee/.fonts ###change path to font here
+## wallpaper
+exec_always feh --bg-fill ~/Pictures/wallpaper.png ###change to path to your wallpaper
+## polybar
+exec_always --no-startup-id killall polybar: polybar -r main
+## picom
+exec_always --no-startup-id picom -b
+
+## URxvt setting
+exec_always --no-startup-id xrdb ~/.Xresources

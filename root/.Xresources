@@ -1,0 +1,13 @@
+! basic configuration
+URxvt.scrollBar: false
+URxvt.cursorBlink: true
+URxvt.internalBorder: 0
+URxvt.urlLauncher: google-chrome
+URxvt.transparent: true
+URxvt.shading: 80
+
+! font options
+URxvt.font:       xft:Hack: size=10: antialiasing=true
+Xft*dpi:          96
+Xft*antialias:    true
+Xft*hinting:      full
