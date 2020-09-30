@@ -19,6 +19,7 @@ This is my attempt on customizing my linux laptop, which originally was experien
 - pdf viewer: zathura
 - img viewer: feh
 - font: Hack
+- file-switcher: rofi
 - wallpaper: anime erase from <a href="https://www.reddit.com/r/wallpapers/comments/iz4ry2/this_is_my_personal_favorite_background_for/">reddit/r/wallpapers</a>
 
 ### Terminal based widgets:
