@@ -2,9 +2,9 @@
 This is my attempt on customizing my linux laptop, which originally was experiencing performance issue running windows 10.
 
 ### V.1
-<a href="https://ibb.co/6mfzFGX"><img src="https://i.ibb.co/2yfxdRZ/Screenshot-from-2020-09-29-17-10-17.png" alt="Screenshot-from-2020-09-29-17-10-17" border="0"></a> <br>
+<img src="https://i.ibb.co/2yfxdRZ/Screenshot-from-2020-09-29-17-10-17.png" alt="image" border="0"><br>
 <img src="https://i.ibb.co/ZMXS20j/image.png" alt="image" border="0"><br>
-<a href="https://ibb.co/BqCqgL8"><img src="https://i.ibb.co/FgDgB6G/Screenshot-from-2020-09-29-17-14-30.png" alt="Screenshot-from-2020-09-29-17-14-30" border="0"></a> <br>
+<img src="https://i.ibb.co/FgDgB6G/Screenshot-from-2020-09-29-17-14-30.png" alt="image" border="0"><br>
 
 ### V.0
 <a href="https://ibb.co/mHXnZS4"><img src="https://i.ibb.co/y8YzvVq/Screenshot-from-2020-09-29-10-11-20.png" alt="Screenshot-from-2020-09-29-10-11-20" border="0"></a> <br>
