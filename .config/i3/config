@@ -1,22 +1,146 @@
-# Set mod to Window key
+##### MAIN SETTINGS #####
+# Set mod key
 set $mod Mod4
-
-# Change gap size
+# turn off border
+for_window [class=".*"] border pixel 0
+# i3-gaps
 gaps outer 5
 gaps inner 20
+# i3-radius
+border_radius 5
+smart_borders on
+# enable floating windows draggable
+floating_modifier $mod
+# end able floating for specific program / window
+for_window [class="spotify"] floating enable
 
-# Floating windows
-for_windows [class="mpv"] floating enable
+##### SCRIPTS ##### 
+exec_always ~.config/scripts/xdbus.sh
 
-# Startup Programs
-## fonts
-exec_always xset +fp /home/bee/.fonts ###change path to font here
-## wallpaper
-exec_always feh --bg-fill ~/Pictures/wallpaper.png ###change to path to your wallpaper
-## polybar
+##### STARTUP PROGRAMS #####
+# fonts
+### change path to font
+exec_always xset +fp /home/bee/.fonts 
+# wallpaper
+### change path to wallpaper
+exec_always feh --bg-fill ~/Pictures/wallpaper.png
+# polybar
 exec_always --no-startup-id killall polybar: polybar -r main
-## picom
-exec_always --no-startup-id picom -b
-
-## URxvt setting
+# dunst - notification
+exec_always --no-startup-id dunst
+# URxvt setting
 exec_always --no-startup-id xrdb ~/.Xresources
+
+##### GENERAL KEYBINDS #####
+### check keybindings using xev -event keyboard | egrep -o 'keycode.*\)' ###
+# quit current window
+bindsym $mod+q kill
+# reload configuration
+bindsym $mod+Shift+c reload
+# restart i3
+bindsym $mod+Shift+r restart
+
+##### SYSTEM KEYBINDS #####
+# logout w/ betterlockscreen
+bindsym --release $mod+l exec betterlockscreen -l
+# printscreen w/ gnome
+bindsym Print exec gnome-screenshot -i 
+# crop screen w/ gnome
+bindsym $mod+Print exec gnome-screenshot -a
+# mediakeys for audo w/ pactl 
+### <sudo apt install pactl>
+## volume up by 5
+### change volume number here ###
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
+## volume down by 5
+### change volume number here ###
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
+## mute
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
+# brightness / backlight w/ light
+### <sudo apt install light>
+## installe light, then add user to Video group by running 'sudo usermod -a -G video $USER'
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
+
+##### WORKSPACE KEYBINDS #####
+# fullscreen
+bindsym $mod+f fullscreen
+# floating window enabler
+bindsym $mod+Shift+space floating toggle
+# switch between workspaces
+bindsym $mod+bracketright workspace next
+bindsym $mod+bracketleft workspace prev
+# Switch to specific workspace
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+# move slected window to other workspace
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+# resize selected window
+bindsym $mod+Control+Left resize shrink width 10 px or 10
+bindsym $mod+Control+Down resize grow height 10 px or 10
+bindsym $mod+Control+Up resize shrink height 10 px or 10
+bindsym $mod+Control+Right resize grow width 10 px or 10
+bindsym $mod+Shift+Control+Left resize shrink width 1 px or 1
+bindsym $mod+Shift+Control+Down resize grow height 1 px or 1
+bindsym $mod+Shift+Control+Up resize shrink height 1 px or 1
+bindsym $mod+Shift+Control+Right resize grow width 1 px or 1
+# switch between windows
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+# rearrange windows position
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+# split windows in current workspace horizontally
+bindsym $mod+h split h
+# split windows in current workspace vertically
+bindsym $mod+v split v
+# container layout
+## stacked
+bindsym $mod+r layout stacking
+## tabbed
+bindsym $mod+w layout tabbed
+## toggle split
+bindsym $mod+e layout toggle split
+# Change focus between tiling / floating windows
+# bindsym $mod+space focus mode_toggle
+# exit to ubuntu login page
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Would you like to end your current session?' -b 'END' 'i3-msg exit'"
+
+##### PERSONAL KEYBINDS #####
+### check keybindings using <xev -event keyboard | egrep -o 'keycode.*\)'> ###
+# dmenu
+bindsym $mod+d exec dmenu_run
+# music player - spotify
+bindsym $mod+s exec spotify
+# editor - vs code
+bindsym $mod+c exec code
+# file manager - thunar
+bindsym $mod+t exec thunar
+# browser - chome
+bindsym $mod+b exec google-chrome
+# terminal - URxvt
+bindsym $mod+Return exec urxvt
+# rofi drun menu
+bindsym $mod+space exec rofi -show drun -theme clean -icon-theme candy-icons
