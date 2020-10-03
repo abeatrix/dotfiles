@@ -27,7 +27,6 @@ This is my attempt on customizing my linux laptop, which originally was experien
 - neofetch
 - cmatrix
 - htops
-- tetris
 - mpv with youtube-dl
 - cli-visualizer
 - tty-clock
