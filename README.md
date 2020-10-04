@@ -1,4 +1,4 @@
-# dotfiles for Ubutun
+# dotfiles for i3wm Ubutun
 This is my attempt on customizing my linux laptop, which originally was experiencing performance issue running windows 10.
 
 ### V.1
