@@ -2,10 +2,9 @@
 This is my attempt on customizing my linux laptop, which originally was experiencing performance issue running windows 10.
 
 ### V.1
-<img src="https://i.ibb.co/ZMXS20j/image.png" alt="image" border="0"><br>
-
-### V.0
-<img src="https://i.ibb.co/y8YzvVq/Screenshot-from-2020-09-29-10-11-20.png" alt="Screenshot-from-2020-09-29-10-11-20" border="0"><br>
+<img src="https://cdn.discordapp.com/attachments/760917988927864873/762092028762259486/Screenshot_from_2020-10-03_16-20-52.png" alt="image" border="0"><br>
+<img src="https://cdn.discordapp.com/attachments/760917988927864873/762092003462086677/Screenshot_from_2020-10-03_13-36-04.png" alt="image" border="0"><br>
+<img src="https://cdn.discordapp.com/attachments/760917988927864873/762092011188649984/Screenshot_from_2020-10-03_15-23-06.png" alt="image" border="0"><br>
 
 ## Setup + Credits
 ### Details
@@ -25,7 +24,6 @@ This is my attempt on customizing my linux laptop, which originally was experien
 - neofetch
 - cmatrix
 - htops
-- mpv with youtube-dl
 - cli-visualizer
 - tty-clock
 
