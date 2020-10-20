@@ -6,9 +6,11 @@ for_window [class=".*"] border pixel 0
 # i3-gaps
 gaps outer 5
 gaps inner 20
+gaps bottom 50
 # i3-radius
-border_radius 5
 smart_borders on
+# smart_borders no_gaps
+border_radius 5
 # enable floating windows draggable
 floating_modifier $mod
 # end able floating for specific program / window
@@ -127,6 +129,9 @@ bindsym $mod+e layout toggle split
 # bindsym $mod+space focus mode_toggle
 # exit to ubuntu login page
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Would you like to end your current session?' -b 'END' 'i3-msg exit'"
+# picom
+exec_always --no-startup-id picom-trans 90
+exec_always --no-startup-id picom
 
 ##### PERSONAL KEYBINDS #####
 ### check keybindings using <xev -event keyboard | egrep -o 'keycode.*\)'> ###
@@ -142,5 +147,5 @@ bindsym $mod+t exec thunar
 bindsym $mod+b exec google-chrome
 # terminal - URxvt
 bindsym $mod+Return exec urxvt
-# rofi drun menu
-bindsym $mod+space exec rofi -show drun -theme clean -icon-theme candy-icons
+# Start rofi drun menu
+bindsym $mod+space exec rofi -show drun -icon-theme candy-icons
