@@ -4,7 +4,7 @@ foreground = #c9daf5
 foreground-alt = #c9daf5
 primary = #c9fabb
 secondary = #95f27e
-focused = #c9fabb
+focused = #95f27e
 unfocused = #4bb2bf
 alert = #ff85fd
 
@@ -19,21 +19,26 @@ margin-bottom = 10
 
 
 [bar/main]
+bottom = true
 enable-ipc = true
 tray-position = none
-override-redirect = false
+override-redirect = true
 wm-restack = i3
 cursor-click = pointer
+cursor-scroll = ns-resize
 
 modules-left = i3
 modules-center = xwindow
-modules-right = backlight audio wlan battery dunst date power
+modules-right = audio wlan battery dunst date powermenu
 
-bottom = true
 border-bottom-size = 15
-width = 100%:-10
+width = 100%:-50
+offset-x = 25
+offset-y = 25
 height = 30
 radius = 10
+fixed-center = true
+
 padding-left = 1
 padding-right = 2
 module-margin-left = 1
